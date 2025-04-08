@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Taxonomies
  * Description: Registers custom taxonomies for Pages and adds default terms.
- * Version: 1.4
+ * Version: 1.0.1
  * Author: GabeMira157
  */
 
