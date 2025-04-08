@@ -12,17 +12,13 @@ jobs:
 
     steps:
     - name: Checkout plugin code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set plugin name
       id: vars
       run: |
         echo "PLUGIN_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
-        echo "TAG_NAME=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
-
-    - name: Zip plugin folder
-      run: |
-        zip -r ${{ env.PLUGIN_NAME }}.zip . -x "*.git*" -x "*.github*"
+        echo "TAG_NAME=$(date +'%Y.%m.%d.')" >> $GITHUB_ENV
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1
